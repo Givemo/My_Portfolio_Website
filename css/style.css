@@ -14,8 +14,8 @@
     --fw-bold: 900;
 
     --clr-light: #fff;
-    --clr-dark: #303030;
-    --clr-accent: #16e0bd;
+    --clr-dark: #080349;
+    --clr-accent: #1281db;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -478,6 +478,10 @@ header {
     color: #fff;
     display: block;
     margin-bottom: 20px;
+}
+
+.portfolio a:hover {
+    transform: scale(1.1);
 }
 
 .portfolio p {
