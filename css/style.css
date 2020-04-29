@@ -22,7 +22,7 @@
     --fs-h3:1.25rem;
     --fs-body: 1rem;
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25);
-    0.125em 0.125em 0.25em rgba(0,0,0,.15);
+    /* 0.125em 0.125em 0.25em rgba(0,0,0,.15); */
 }
 
 @media (min-width: 800px) {
@@ -248,7 +248,7 @@ header {
 @media (min-width: 600px) {
     .intro {
         display: grid;
-        width: min-content;
+        width: 70%;
         margin: 0 auto;
         grid-column-gap: 1em;
         grid-template-areas:
@@ -275,7 +275,7 @@ header {
         text-align: right;
         position: relative;
         left: -1.5em;
-        width: calc(100% + 1.5em);
+        width: calc(100% + -3em);
     }
 }
 
@@ -496,4 +496,10 @@ header {
 .logo {
     color: green;
     width: 30px;
+}
+
+/* Typing effect feature styling */
+/* Cursor */
+.txt-type > .txt {
+    border-right: 0.2rem solid var(--clr-dark);
 }
