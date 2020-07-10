@@ -159,6 +159,7 @@ header {
 .nav {
   position: fixed;
   background: var(--clr-dark);
+  opacity: 0.9;
   color: var(--clr-light);
   top: 0;
   bottom: 0;
@@ -175,8 +176,8 @@ header {
   height: 100%;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
-  margin: 0;
+  align-items: flex-start;
+  margin-left: 20px;
   padding: 0;
 }
 
@@ -203,7 +204,7 @@ header {
 }
 
 .nav-open .nav {
-  transform: translate(0);
+  transform: translate(70%);
 }
 
 .nav-open .nav-toggle {
