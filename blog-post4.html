@@ -16,12 +16,36 @@
       rel="stylesheet"
       href="//fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
     />
+    <link
+      href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <div class="logo1">
         <a href="index.html"><img src="images/logo.png" alt="<logo>" /></a>
       </div>
+      <!-- Social icons -->
+      <span class="head-icons">
+        <ul class="social-list">
+            <li class="social-list__item">
+                <a href="https://codepen.io/givemo" class="social-list__link"><i class="fab fa-codepen fa-lg"></i></a></li>
+            <li class="social-list__item">
+                <a href="https://github.com/Givemo" class="social-list__link"><i class="icon-github icon-large"></i></a></li>
+            <li class="social-list__item">
+                <a href="https://twitter.com/gtchiwanza" class="social-list__link"><i class="icon-twitter icon-large"></i></a></li>
+            <li class="social-list__item">
+                <a href="https://www.facebook.com/givemoret.chiwanza" class="social-list__link"><i class="icon-facebook icon-large"></i></a></li>
+            <li class="social-list__item">
+                <a href="https://www.linkedin.com/in/givemore-t-chiwanza-a98a9517b/" class="social-list__link"><i class="icon-linkedin icon-large"></i></a></li>
+            <li class="social-list__item">
+                <a href="mailto:gtchiwanza@gmail.com" class="social-list__link"><i class="icon-envelope icon-large"></i></a></li>
+        </ul>
       <button class="nav-toggle" aria-label="toggle navigation">
         <span class="hamburger"></span>
       </button>
@@ -45,6 +69,14 @@
         </ul>
       </nav>
     </header>
+
+    <!-- Theme toggle button/checkbox-->
+    <div class="theme-container">
+      <label id="switch" class="switch">
+        <input type="checkbox" onchange="toggleTheme()" id="slider" />
+        <span class="slider round"></span>
+      </label>
+    </div>
 
     <!--Introduction -->
     <section class="intro">
@@ -85,39 +117,43 @@
         Duis aute irure dolor in
       </p>
     </div>
-
+    <hr>
     <!-- Footer-->
     <footer class="footer">
-      <a href="#" class="footer__link">gtchiwanza@gmail.com</a>
       <ul class="social-list">
         <li class="social-list__item">
           <a href="https://codepen.io/givemo" class="social-list__link"
-            ><img src="images/codepen.svg"
-          /></a>
+            ><i class="fab fa-codepen fa-lg"></i
+          ></a>
         </li>
         <li class="social-list__item">
           <a href="https://github.com/Givemo" class="social-list__link"
-            ><img src="images/github.svg"
-          /></a>
+            ><i class="icon-github icon-large"></i
+          ></a>
         </li>
         <li class="social-list__item">
           <a href="https://twitter.com/gtchiwanza" class="social-list__link"
-            ><img src="images/twitter.svg"
-          /></a>
+            ><i class="icon-twitter icon-large"></i
+          ></a>
         </li>
         <li class="social-list__item">
           <a
             href="https://www.facebook.com/givemoret.chiwanza"
             class="social-list__link"
-            ><img src="images/facebook-square.svg"
-          /></a>
+            ><i class="icon-facebook icon-large"></i
+          ></a>
         </li>
         <li class="social-list__item">
           <a
             href="https://www.linkedin.com/in/givemore-t-chiwanza-a98a9517b/"
             class="social-list__link"
-            ><img src="images/linkedin.svg"
-          /></a>
+            ><i class="icon-linkedin icon-large"></i
+          ></a>
+        </li>
+        <li class="social-list__item">
+          <a href="mailto:gtchiwanza@gmail.com" class="social-list__link"
+            ><i class="icon-envelope icon-large"></i
+          ></a>
         </li>
       </ul>
     </footer>

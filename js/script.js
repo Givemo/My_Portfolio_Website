@@ -172,9 +172,13 @@ function toggleTheme() {
 (function () {
   if (localStorage.getItem("theme") === "theme-dark") {
     setTheme("theme-dark");
+    document.body.style.background = "var(--clr-dark)";
+    document.body.style.color = "var(--clr-light)";
     document.getElementById("slider").checked = false;
   } else {
     setTheme("theme-light");
+    document.body.style.background = "var(--clr-light)";
+    document.body.style.color = "var(--clr-dark)";
     document.getElementById("slider").checked = true;
   }
 })();
