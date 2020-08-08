@@ -698,7 +698,8 @@ samp {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+
+  background-color: var(--clr-light);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -723,6 +724,7 @@ samp {
 
 input:checked + .slider {
   background-color: #2196f3;
+  background-color: var(--clr-accent);
 }
 
 input:focus + .slider {
