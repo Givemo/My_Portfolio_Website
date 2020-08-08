@@ -157,7 +157,7 @@ section {
   margin-bottom: 2em;
 }
 .section__title_testimonials {
-  color: var(--clr-dark);
+  color: var(--clr-light);
   font-weight: var(--fw-bold);
   margin-bottom: 2em;
   text-align: center;
@@ -555,7 +555,7 @@ header {
 }
 
 .portfolio a {
-  color: #fff;
+  color: var(--clr-light);
   display: block;
   margin-bottom: 20px;
 }
@@ -565,7 +565,7 @@ header {
 }
 
 .portfolio p {
-  color: #fff;
+  color: var(--clr-light);
   font-weight: bold;
 }
 
