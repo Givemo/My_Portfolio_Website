@@ -388,6 +388,18 @@ header {
   max-width: 300px;
 }
 
+.skills-card {
+  box-shadow: var(--bs);
+  max-width: 300px;
+  background: var(--clr-dark);
+  color: var(--clr-light);
+  grid-area: img;
+}
+
+.skills-card li {
+  padding: 10px;
+}
+
 @media (min-width: 600px) {
   .about-me {
     display: grid;
@@ -417,6 +429,15 @@ header {
     grid-area: img;
     position: relative;
     z-index: 2;
+  }
+
+  .skills-card {
+    grid-area: img;
+    position: relative;
+    z-index: 2;
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    padding: 10px;
   }
 }
 
