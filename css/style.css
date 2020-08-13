@@ -169,6 +169,14 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 1em;
+  background: linear-gradient(
+      rgba(191, 190, 202, 0.45),
+      rgba(86, 80, 110, 0.45)
+    ),
+    url(/images/jumbotron-cover.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .head-icons {
