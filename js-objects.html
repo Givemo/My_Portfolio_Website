@@ -61,7 +61,7 @@
               <li class="nav__item">
                 <a href="index.html#education" class="nav__link">Education</a>
               </li>
-              <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+              <li class="nav__item"><a href="blog.html" class="nav__link">Blog</a></li>
         </ul>
     </nav>
     </header>
@@ -77,7 +77,7 @@
     <!--Introduction -->
     <section class="intro">
       <h1 class="section__title section__title--intro">
-        <strong>My first Website Project</strong>
+        <strong>JavaScript Objects</strong>
       </h1>
       <p class="section__subtitle section__subtitle--intro">A short subtitle</p>
       <img
@@ -88,14 +88,58 @@
     </section>
 
     <div class="portfolio-item-individual1">
+      <p><em>July 18, 2020</em></p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in
+        The simplest and most common way of creating javascript objects in the Object Literal. The syntax is as follows:
+        <pre><code>
+           1 | let  car = {
+           2 |  name: "bmw", 
+           3 |   color: "white"
+           4 | }
+           5 | console.log(car.name)    <span class="console-error"> // bmw</span>
+           6 | console.log(car.color)   <span class="console-error"> // white</span>
+           7 | console.log(car[name])   <span class="console-error"> // bmw</span>
+           8 | console.log(car[color])   <span class="console-error">// white</span>
+          </code></pre>
+        As shown above, access the properties of the object we use either the dot notation or the bracket notation. I'll explain these different choices later.<br>
+        In javascript you can change the shape of the object after it is created. Let's add an model property to our car object.
+        <pre><code>
+          car.model = 123;
+          console.log(car.model)   <span class="console-error"> // 123</span>
+          
+        </code></pre>
+        We can also add functions to objects.
+        <pre><code>
+          car.hoot = function () {
+            console.log("Pipipiii")
+          }
+          car.hoot()        <span class="console-error">//Pipipiii</span>
+        </code></pre>
+        I can as well add the function as part of my bject literal and get the same result ike this:
+        <pre><code>
+          1 | let  car = {
+          2 |  name: "bmw", 
+          3 |  color: "white",
+          4 |  hoot: function() {console.log('Pipipiii')}
+          4 | }
+          5 | console.log(car.hoot)    <span class="console-error"> // Pipipiii</span>
+        </code></pre>
+      </p>
+      <p>
+        The limit of creating objects using the Object literal method comes when we want to create multiple instances of the object. Let's see how a Constructor function works.
+        <pre><code>
+          function Car() {
+            this.name: 'bmw';
+            this.color: 'white';
+          }
+          let new car = new Car();
+
+          console.log(cat)     <span class="console-error">// Car {
+                                    name: bmw
+                                    color: white
+                                  } </span>     
+        </code></pre>
+        To understand what's really going on here we need to look closely at the <code>this</code> keyword. The <code>this</code> keyword refers to an object, but it does not refer to the function as an object itself, it's a special object called a context for the function. It's whatever object executing the current peace of code. By default it is the global object and in a web browser that is the window object. So when we execute the <code>Car</code> function, <code>this</code> was refering to a new empty object. This is made possible by the <code>new</code> keyword which creates a new empty javascript object, set the context of <code>this</code> to that new object and then calls the <code>Car</code> function. In this case, <code>this</code> refers to the object that holds the function
       </p>
       <img
         src="images/laptop-from-above.jpg"
