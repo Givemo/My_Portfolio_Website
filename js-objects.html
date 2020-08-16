@@ -10,7 +10,7 @@
       integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/style.css" />
+  
     <link
       link
       rel="stylesheet"
@@ -24,6 +24,7 @@
       href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
@@ -139,7 +140,7 @@
                                     color: white
                                   } </span>     
         </code></pre>
-        To understand what's really going on here we need to look closely at the <code>this</code> keyword. The <code>this</code> keyword refers to an object, but it does not refer to the function as an object itself, it's a special object called a context for the function. It's whatever object executing the current peace of code. By default it is the global object and in a web browser that is the window object. So when we execute the <code>Car</code> function, <code>this</code> was refering to a new empty object. This is made possible by the <code>new</code> keyword which creates a new empty javascript object, set the context of <code>this</code> to that new object and then calls the <code>Car</code> function. In this case, <code>this</code> refers to the object that holds the function
+        To understand what's really going on here we need to look closely at the <code>this</code> keyword. The <code>this</code> keyword refers to an object, but it does not refer to the function as an object itself, it's a special object called a context for the function. It's whatever object executing the current peace of code. By default it is the global object and in a web browser that is the window object. So when we execute the <code>Car</code> function, <code>this</code> was refering to a new empty object. This is made possible by the <code>new</code> keyword which creates a new empty javascript object, set the context of <code>this</code> to that new object and then calls the <code>Car</code> function. Read the article <a href="this-keyword.html">the <code>this</code> keyword </a>for a detailed explanation.
       </p>
       <img
         src="images/laptop-from-above.jpg"
