@@ -88,10 +88,17 @@
       />
     </section>
 
-    <div class="portfolio-item-individual1">
+    <section class="portfolio-item-individual1">
       <p><em>July 18, 2020</em></p>
       <p>
-        The simplest and most common way of creating javascript objects in the Object Literal. The syntax is as follows:
+        There are three main ways of creating javascript objects: <em>Object Literals</em>, <em>Constructor functions</em> and <em>ES6 Classes</em>
+      </p>
+        
+      <h3>Object Literals</h3>
+      <p>
+        The simplest and most common way of creating javascript objects is using <em>Object Literals</em>. The syntax is as follows:
+      </p>
+      <p>
         <pre><code>
            1 | let  car = {
            2 |  name: "bmw", 
@@ -102,32 +109,40 @@
            7 | console.log(car[name])   <span class="console-error"> // bmw</span>
            8 | console.log(car[color])   <span class="console-error">// white</span>
           </code></pre>
-        As shown above, access the properties of the object we use either the dot notation or the bracket notation. I'll explain these different choices later.<br>
-        In javascript you can change the shape of the object after it is created. Let's add an model property to our car object.
+        </p>
+        <p>
+        As shown obove, you access the properties of the object using either the dot notation or the bracket notation.<br>
+        In javascript you can change the shape of the object after it has been created. Let's add a <code>model</code> property to our car object.
         <pre><code>
           car.model = 123;
           console.log(car.model)   <span class="console-error"> // 123</span>
           
         </code></pre>
+      </p>
+      <p>
         We can also add functions to objects.
+      </p>
         <pre><code>
           car.hoot = function () {
             console.log("Pipipiii")
           }
           car.hoot()        <span class="console-error">//Pipipiii</span>
         </code></pre>
-        I can as well add the function as part of my bject literal and get the same result ike this:
+      </p>
+      <p>
+        You can as well add the function as part of the object literal and get the same result like this:
         <pre><code>
           1 | let  car = {
           2 |  name: "bmw", 
           3 |  color: "white",
           4 |  hoot: function() {console.log('Pipipiii')}
-          4 | }
-          5 | console.log(car.hoot)    <span class="console-error"> // Pipipiii</span>
+          5 | }
+          6 | console.log(car.hoot)    <span class="console-error"> // Pipipiii</span>
         </code></pre>
       </p>
-      <p>
-        The limit of creating objects using the Object literal method comes when we want to create multiple instances of the object. Let's see how a Constructor function works.
+        <h3>Constructor functions</h3>
+        <p>
+        The limit of creating objects using the Object literal method comes when we want to create multiple instances of the object. A Constuctor function is used to instantiate a new object. I t looks like a regular function but it behaves diferently. Let's see how a <em>Constuctor function</em> solve this problem.
         <pre><code>
           function Car() {
             this.name: 'bmw';
@@ -140,28 +155,86 @@
                                     color: white
                                   } </span>     
         </code></pre>
-        To understand what's really going on here we need to look closely at the <code>this</code> keyword. The <code>this</code> keyword refers to an object, but it does not refer to the function as an object itself, it's a special object called a context for the function. It's whatever object executing the current peace of code. By default it is the global object and in a web browser that is the window object. So when we execute the <code>Car</code> function, <code>this</code> was refering to a new empty object. This is made possible by the <code>new</code> keyword which creates a new empty javascript object, set the context of <code>this</code> to that new object and then calls the <code>Car</code> function. Read the article <a href="this-keyword.html">the <code>this</code> keyword </a>for a detailed explanation.
+        </p>
+        <p>
+        Notice that the function <code>Car()</code> starts with a capital letter. This is a convention for Constructor functions.
+        </p>
+        <p>
+        To understand what's really going on here we need to look closely at the <code>this</code> keyword. The <code>this</code> keyword refers to an object, but it does not refer to the function as an object itself, it's a special object called a context for the function. It's whatever object executing the current peace of code.
+        </p> 
+        <p>
+        By default it is the global object and in a web browser that is the window object. So when we executed the <code>Car</code> function, <code>this</code> was refering to a new empty object.
+        </p>
+        <p>
+        This is made possible by the <code>new</code> keyword which creates a new empty javascript object, set the context of <code>this</code> to that new object and then calls the <code>Car</code> function. Read the article <a href="this-keyword.html">the <code>this</code> keyword </a>for a detailed explanation.
       </p>
-      <img
-        src="images/laptop-from-above.jpg"
-        alt="Image of laptop from above"
-      />
+      <p>Now let's make our object create any type of car instead of just one white bmw.
+        <pre><code>
+          function Car(name, color) {
+            this.name: name;
+            this.color: color;
+          }
+          let new car = new Car('bmw', 'white');
+
+          console.log(cat)     <span class="console-error">// Car {
+                                    name: bmw
+                                    color: white
+                                  } </span>
+        </code></pre>
+      </p>
+      <h3>Classes</h3>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in
+        ES6 version of javascript provides functionality to create objects in a syntax similar to a statically typed language. This is just syntactic sugar like the two above of creating objects. I will later on explain a brute syntax of what will actually be happening under the hood when we create objects. All these methods will be doing the same thing underneath
+      </p>
+      <p>To create our car using a class we will do the following.
+        <pre><code>
+          class  Car {
+            constructor(name, color) {
+              this.name = name;
+              this.color = color;
+            }
+            hoot() {
+              console.log('Pipipiii')
+            }
+          }
+          let car = new Car('bmw', 'white');
+          car.hoot()             <span class="console-error">// Pipipiii</span>
+          console.log(car)       <span class="console-error">//  {
+                                      name: bmw
+                                      color: white
+                                    }</span>
+        </code></pre>
+      </p>
+      <h3>Object.create</h3>
+      <p>
+        The methods above are basically syntactic sugar for <code>Object.create</code>. Let's create the same object using the <code>Object.create </code>syntax.
+        <pre><code>
+          let car = Object.create(Object.prototype,
+          {
+            name: {
+              value: 'bmw',
+              enumerable: true,
+              writable: true,
+              configerable: true
+            },
+            color: {
+              value: 'white',
+              enumerable: true,
+              writable: true,
+              configerable: true
+            }
+          })
+          console.log(car)    <span class="console-error">     //  Object {
+                                          name: bmw;
+                                          color: white
+                                        }</span>
+        </code></pre>
       </p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in
+        This is more involving and I think you can see why it's easier to use the methods explained above in creating objects. I expained the <code>Object.create</code> in more details in the article <a href="#">Javascript Object Properties</a>.
       </p>
-    </div>
+      
+    </section>
     <hr>
 
     <!-- Footer-->
@@ -202,6 +275,7 @@
           ></a>
         </li>
       </ul>
+      <p class="copyright">Copyright 2020 <span>created by Givemore</span></p>
     </footer>
     <script src="js/script.js"></script>
   </body>

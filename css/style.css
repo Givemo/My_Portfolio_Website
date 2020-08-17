@@ -594,6 +594,11 @@ header {
   text-decoration: underline;
 }
 
+.copyright {
+  color: var(--clr-accent);
+  font-size: var(--fs-body);
+}
+
 .social-list {
   list-style: none;
   display: flex;
@@ -616,6 +621,12 @@ header {
   padding: 0 2em 2em;
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.portfolio-item-individual1 h3 {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .portfolio-item-individual1 p {
@@ -697,6 +708,12 @@ samp {
 }
 pre code {
   white-space: pre;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pre {
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 .console-error {
@@ -704,10 +721,10 @@ pre code {
 }
 
 .portfolio-item-individual1 pre {
-  max-width: 100%;
-  margin-left: auto;
+  margin-left: inherit;
   margin-right: auto;
   overflow: auto;
+  padding: 20px;
 }
 
 @media (max-width: 500px) {
