@@ -540,7 +540,7 @@ header {
 }
 .test-item {
   border: 1px solid var(--clr-dark);
-  width: 500px;
+  width: 70%;
   height: auto;
   margin-top: 4px;
   padding: 15px;
