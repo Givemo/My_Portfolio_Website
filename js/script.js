@@ -11,6 +11,7 @@ navLinks.forEach((link) => {
   });
 });
 
+
 const TypeWriter = function (txtElement, words, wait = 2000) {
   this.txtElement = txtElement;
   this.words = words;
