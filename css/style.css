@@ -32,7 +32,7 @@
 }
 
 .theme-light {
-  --clr-light: #a4b3b6;
+  --clr-light: #fff;
   --clr-dark: #2a1b3d;
   --clr-accent: #44318d;
   --clr-light-accent: #e98074;
@@ -666,25 +666,30 @@ header {
   border-right: 0.2rem solid var(--clr-accent);
 }
 
-/*Blog homepage Styling*/
+
+/* Blog page Styling */
+
 .posts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding: 0 2em 2em;
   max-width: 1000px;
   margin: 0 auto;
-  grid-gap: 5px;
+  grid-gap: 5rem;
 }
 
-.posts p,
-a {
+.posts p {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
 
+.posts p a {
+  line-height: 1px;
+}
+
 .post-header {
-  font-size: var(--fs-h3);
+  font-size: var(--fs-h4);
   text-decoration: none;
 }
 
