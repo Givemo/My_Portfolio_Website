@@ -23,10 +23,10 @@
   --clr-accent-theme: #45a29e;
   --clr-light-accent-theme: #66fcf1;*/
 
-  --fs-h1: 2.5rem;
-  --fs-h2: 2.25rem;
-  --fs-h3: 1.25rem;
-  --fs-body: 1rem;
+  --fs-h1: 3rem;
+  --fs-h2: 2.5rem;
+  --fs-h3: 1.5rem;
+  --fs-body: 1.25rem;
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25);
   /* 0.125em 0.125em 0.25em rgba(0,0,0,.15); */
 }
@@ -169,11 +169,10 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 1em;
-  background: linear-gradient(rgba(0,0,0,.9), rgba(16, 3, 61, 0.8)),
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(16, 3, 61, 0.8)),
     url(/images/jumbotron-cover.jpg);
   background-size: cover;
   background-position: center;
-
 }
 
 .head-icons {
@@ -665,7 +664,6 @@ header {
 .txt-type > .txt {
   border-right: 0.2rem solid var(--clr-accent);
 }
-
 
 /* Blog page Styling */
 
