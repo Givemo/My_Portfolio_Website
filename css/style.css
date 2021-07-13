@@ -289,6 +289,8 @@ header {
   bottom: 6px;
 }
 
+/*Show nav links when screen is wider*/
+
 /*Intro section*/
 
 .intro {
@@ -297,8 +299,8 @@ header {
 
 .intro__img {
   box-shadow: var(--bs);
-  background: linear-gradient(rgba(19, 8, 99, 0.45), rgba(13, 3, 53, 0.45)),
-    url(/images/profile.jpg);
+  background: linear-gradient(rgba(9, 2, 59, 0.45), rgba(198, 192, 223, 0.45)),
+    url(/images/hands\ on\ pc\ code.jpg);
   background-position: center;
   background-size: cover;
 }
